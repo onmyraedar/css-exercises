@@ -15,11 +15,31 @@ body {
   justify-content: center;
 }
 
+/* The modal's flex items are the icon and modal-content */
 .modal {
   background: white;
   width: 480px;
   border-radius: 10px;
   box-shadow: 2px 4px 16px rgba(0,0,0,.2);
+  padding: 15px;
+  display: flex;
+  gap: 15px;
+}
+
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.header {
+  /* Notice that the 700 style is also imported at the top of the stylesheet */
+  font-weight: 700;
+}
+
+.text {
+  font-size: 14px;
+  margin-bottom: 15px;
 }
 
 .icon {
@@ -33,6 +53,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  /* Prevents the icon from being squooshed into an ellipse */
+  flex-shrink: 0;
 }
 
 .close-button {
@@ -46,6 +68,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  /* Prevents the icon from being squooshed into an ellipse */
+  flex-shrink: 0;
 }
 
 button {
