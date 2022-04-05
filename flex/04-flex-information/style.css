@@ -7,9 +7,38 @@ img {
   height: 100px;
 }
 
+.content {
+  display: flex;
+  flex-direction: column;
+  /* Centers .title and .item-container */
+  align-items: center;
+}
+
 .title {
   font-size: 36px;
   font-weight: 900;
+  margin: 0px 0px 32px 0px;
+}
+
+.item-container {
+  /* Makes the four items line up horizontally */
+  display: flex;
+  align-items: center;
+  gap: 52px;
+}
+
+.item {
+  /*
+  --- NO LONGER NEEDED:
+  display: flex;
+  --- We don't want the image and text to be on the same line
+  flex-direction: column;
+  --- Centers items horizontally, along the cross axis
+  align-items: center;
+  */
+  max-width: 200px;
+  /* Images are inline and can be horizontally centered using text-align! */
+  text-align: center;
 }
 
 /* do not edit this footer */
